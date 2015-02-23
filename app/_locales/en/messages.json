@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Magic Zawgyi",
+    "description": "Automagically generate Zawgyi/Unicode version in browser."
+  },
+  "appDescription": {
+    "message": "Automagically generate Zawgyi/Unicode version of text in browser.",
+    "description": "Automagically generate Zawgyi/Unicode version of text in browser."
+  }
+}

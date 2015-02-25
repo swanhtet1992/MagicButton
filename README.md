@@ -20,3 +20,5 @@ Todo
 Contribution
 ---
 Contributions are warmly welcome. I can't really write javascript codes. I just did Magic Button because I needed it. Other people need this too. If you are Javascript ninja, please do contribute!!! 😻
+
+Special thanks to [Thiha Tun](https://github.com/alt332) for helping me along the way.

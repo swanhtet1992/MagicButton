@@ -27,7 +27,7 @@ window.addEventListener("load", function() {
     var textBox = document.getElementsByName('xhpc_message_text')[0];
 
     if (typeof textBox.value != 'undefined') {
-      textBox.value = "(---Unicode Version---)\n" + textBox.value + "\n\n\n(---Zawgyi Version---)\n" + uni512zg1(textBox.value);
+      textBox.value = "(---Unicode Version---)\n" + textBox.value + "\n\n\n(---Zawgyi Version---)\n" + Uni_Z1(textBox.value);
       document.getElementsByName('xhpc_message')[0].value =  textBox.value;
     }
   };

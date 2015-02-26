@@ -113,11 +113,15 @@ if (window.location.origin === "https://www.facebook.com") {
      */
    Array.prototype.forEach.call(textBoxs, function(box){
       box.addEventListener("focus", function(event){
+        if(focusedTextBox === event.target){
+          return;
+        }
+
         focusedTextBox = event.target;
 
         var parent = event.target.parentNode;
         /* When There is no magic work made */
-        if(!focusedTextBox.getAttribute("data-magic-button")){
+        if(focusedTextBox.getAttribute("data-magic-button") !== "false"){
           parent.appendChild(magicButton);
         } 
         /* If there is any undo work on it */

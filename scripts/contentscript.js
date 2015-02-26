@@ -16,39 +16,43 @@
 // You should have received a copy of the GNU General Public License
 // along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 
+/**
+ *If that facebook work
+ *Otherwise don't 
+ */
+if (window.location.origin === "https://www.facebook.com") {
+    'use strict';
 
-'use strict';
+    window.addEventListener("load", function() {
+        var magicButton = document.createElement("div");
+        magicButton.className = "rfloat _42ft _4jy0 _4jy4 _4jy2 _517h _51sy";
+        magicButton.innerHTML = "Magic Button";
 
-window.addEventListener("load", function() {
-  var magicButton = document.createElement("div");
-  magicButton.className = "rfloat _42ft _4jy0 _4jy4 _4jy2 _517h _51sy";
-  magicButton.innerHTML = "Magic Button";
+        var magicOption = document.createElement("div");
+        magicOption.className = "rfloat";
+        magicOption.innerHTML = "<select style='height:28px' id='magic_button_select'><option value='tozawgyi'>Unicode To Zawgyi</option><option value='tounicode'>Zawgyi to Unicode</option></select>";
 
-  var magicOption = document.createElement("div");
-  magicOption.className = "rfloat";
-  magicOption.innerHTML = "<select style='height:28px' id='magic_button_select'><option value='tozawgyi'>Unicode To Zawgyi</option><option value='tounicode'>Zawgyi to Unicode</option></select>";
+        magicButton.onclick = function() {
+            var textBox = document.getElementsByName('xhpc_message_text')[0];
 
-  magicButton.onclick= function() {
-    var textBox = document.getElementsByName('xhpc_message_text')[0];
+            if (typeof textBox.value != 'undefined') {
+                var select = document.getElementById('magic_button_select');
 
-    if (typeof textBox.value != 'undefined') {
-        var select = document.getElementById('magic_button_select');
-        
-        //To Zawgyi
-        if (select.options[select.selectedIndex].value === "tozawgyi") {
-            textBox.value = "(---Unicode Version---)\n" + textBox.value + "\n\n\n(---Zawgyi Version---)\n" + Uni_Z1(textBox.value);
-        } 
+                //To Zawgyi
+                if (select.options[select.selectedIndex].value === "tozawgyi") {
+                    textBox.value = "(---Unicode Version---)\n" + textBox.value + "\n\n\n(---Zawgyi Version---)\n" + Uni_Z1(textBox.value);
+                }
 
-        //To Unicode
-        if (select.options[select.selectedIndex].value === "tounicode") {
-            textBox.value = "(---Zawgyi Version---)\n" + textBox.value + "\n\n\n(---Unicode Version---)\n" + Z1_Uni(textBox.value);
-        } 
+                //To Unicode
+                if (select.options[select.selectedIndex].value === "tounicode") {
+                    textBox.value = "(---Zawgyi Version---)\n" + textBox.value + "\n\n\n(---Unicode Version---)\n" + Z1_Uni(textBox.value);
+                }
 
-        document.getElementsByName('xhpc_message')[0].value =  textBox.value;
-    }
+                document.getElementsByName('xhpc_message')[0].value = textBox.value;
+            }
+        };
 
-  };
-  document.querySelector('._5142').appendChild(magicOption);
-  magicOption.appendChild(magicButton);
-
-});
+        document.querySelector('._5142').appendChild(magicOption);
+        magicOption.appendChild(magicButton);
+    });
+};

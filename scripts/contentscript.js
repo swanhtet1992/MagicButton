@@ -28,8 +28,6 @@ window.addEventListener("load", function() {
   magicOption.className = "rfloat";
   magicOption.innerHTML = "<select style='height:28px' id='magic_button_select'><option value='tozawgyi'>Unicode To Zawgyi</option><option value='tounicode'>Zawgyi to Unicode</option></select>";
 
-  //magicButton.insertAdjacentHTML('afterEnd', '<div id="two">two</div>');
-
   magicButton.onclick= function() {
     var textBox = document.getElementsByName('xhpc_message_text')[0];
 

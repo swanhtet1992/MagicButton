@@ -19,7 +19,6 @@ function Uni_Z1(input)
 {
    var output = input;
 
-
    output = output.replace(/\u104E\u1004\u103A\u1038/g, '\u104E');
    output = output.replace(/\u102B\u103A/g, '\u105A');
    output = output.replace(/\u102D\u1036/g, '\u108E');

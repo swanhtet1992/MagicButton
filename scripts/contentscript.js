@@ -23,13 +23,34 @@ window.addEventListener("load", function() {
   var magicButton = document.createElement("div");
   magicButton.className = "rfloat _42ft _4jy0 _4jy4 _4jy2 _517h _51sy";
   magicButton.innerHTML = "Magic Button";
+
+  var magicOption = document.createElement("div");
+  magicOption.className = "rfloat";
+  magicOption.innerHTML = "<select style='height:28px' id='magic_button_select'><option value='tozawgyi'>Unicode To Zawgyi</option><option value='tounicode'>Zawgyi to Unicode</option></select>";
+
+  //magicButton.insertAdjacentHTML('afterEnd', '<div id="two">two</div>');
+
   magicButton.onclick= function() {
     var textBox = document.getElementsByName('xhpc_message_text')[0];
 
     if (typeof textBox.value != 'undefined') {
-      textBox.value = "(---Unicode Version---)\n" + textBox.value + "\n\n\n(---Zawgyi Version---)\n" + Uni_Z1(textBox.value);
-      document.getElementsByName('xhpc_message')[0].value =  textBox.value;
+        var select = document.getElementById('magic_button_select');
+        
+        //To Zawgyi
+        if (select.options[select.selectedIndex].value === "tozawgyi") {
+            textBox.value = "(---Unicode Version---)\n" + textBox.value + "\n\n\n(---Zawgyi Version---)\n" + Uni_Z1(textBox.value);
+        } 
+
+        //To Unicode
+        if (select.options[select.selectedIndex].value === "tounicode") {
+            textBox.value = "(---Zawgyi Version---)\n" + textBox.value + "\n\n\n(---Unicode Version---)\n" + Z1_Uni(textBox.value);
+        } 
+
+        document.getElementsByName('xhpc_message')[0].value =  textBox.value;
     }
+
   };
-  document.querySelector('._5142').appendChild(magicButton);
+  document.querySelector('._5142').appendChild(magicOption);
+  magicOption.appendChild(magicButton);
+
 });

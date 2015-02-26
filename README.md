@@ -17,6 +17,10 @@ Todo
 - Improve design
 - Implement global conversitons for all websites
 
+Testing
+---
+- Use (MochaJs)[http://mochajs.org/] for test
+
 Contribution
 ---
 Contributions are warmly welcome. I can't really write javascript codes. I just did Magic Button because I needed it. Other people need this too. If you are Javascript ninja, please do contribute!!! 😻

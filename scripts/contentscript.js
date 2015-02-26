@@ -16,8 +16,20 @@
 // You should have received a copy of the GNU General Public License
 // along with Foobar.  If not, see <http://www.gnu.org/licenses/>.
 
+/*
+ *same with $(document).ready(function(){ });
+ *Got it from http://youmightnotneedjquery.com/ 
+ */
+function ready(fn) {
+  if (document.readyState != 'loading'){
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
+  }
+}
+
 //Wait for document ready state
-if (document.readyState != 'loading'){
+ready(function() {
 
     /**
      *If that facebook work
@@ -63,6 +75,5 @@ if (document.readyState != 'loading'){
             document.querySelector('._5142').appendChild(magicOption);  //append magicOption
             magicOption.appendChild(magicButton);                       //append magicButton
         });
-    };
-
-}
+    };    
+});

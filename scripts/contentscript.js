@@ -131,6 +131,17 @@ if (window.location.origin === "https://www.facebook.com") {
 
       }, false);
 
+      box.addEventListener("keyup", function(event){
+        focusedTextBox = event.target;
+        var parent = event.target.parentNode;
+
+        focusedTextBox.setAttribute("data-magic-button", false);
+
+        parent.removeChild(undoButton);
+        parent.appendChild(magicButton);
+
+      }, false);
+
       // box.addEventListener("blur", function(event){
       //   focusedTextBox = event.target;
 

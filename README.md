@@ -19,7 +19,7 @@ Todo
 
 Testing
 ---
-- Use (MochaJs)[http://mochajs.org/] for test
+- Use [MochaJS](http://mochajs.org/) for test
 
 Contribution
 ---

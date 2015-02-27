@@ -69,6 +69,8 @@ ready(function() {
                     }
 
                     document.getElementsByName('xhpc_message')[0].value = textBox.value;
+                    textBox.style.height = textBox.scrollHeight + 'px';
+                    textBox.setAttribute('aria-expanded', true);
                 }
             };
 

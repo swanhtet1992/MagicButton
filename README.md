@@ -13,9 +13,9 @@ Please note that the accuracy of conversions are up to Parabaik converter.
 ~~It used [Paytan](https://github.com/trhura/paytan) first but found some bugs on Javascript version of the converter.~~
 Todo
 ---
-- Implement Zawgyi to Unicode conversion with Checkbox
-- Improve design
-- Implement global conversitons for all websites
+- ~~Implement Zawgyi to Unicode conversion with Checkbox~~
+- ~~Improve design~~
+- Implement global converter for all websites
 
 Testing
 ---

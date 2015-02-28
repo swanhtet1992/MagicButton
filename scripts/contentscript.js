@@ -73,7 +73,7 @@ if (window.location.origin === "https://www.facebook.com") {
                           _UniVersoin + 
                         "\n\n\n(---Zawgyi Version---)\n" + 
                           _ZawVersoin;
-        focusedTextBox.style.height = textBox.scrollHeight + 'px';
+        focusedTextBox.style.height = focusedTextBox.scrollHeight + 'px';
         focusedTextBox.setAttribute('aria-expanded', true);
  
         // document.getElementsByName('xhpc_message')[0].value =  textBox.value;

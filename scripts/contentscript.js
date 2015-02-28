@@ -128,8 +128,10 @@ if (window.location.origin === "https://www.facebook.com") {
 
         focusedTextBox.setAttribute("data-magic-button", false);
 
-        parent.appendChild(magicButton);
-
+        if (parent.contains(undoButton)) {
+          parent.removeChild(undoButton);
+          parent.appendChild(magicButton);
+        };
       }, false);
     });
   });

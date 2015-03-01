@@ -73,9 +73,7 @@ if (window.location.origin === "https://www.facebook.com") {
                           _UniVersoin + 
                         "\n\n\n(---Zawgyi Version---)\n" + 
                           _ZawVersoin;
-        focusedTextBox.style.height = focusedTextBox.scrollHeight + 'px';
-        focusedTextBox.setAttribute('aria-expanded', true);
- 
+
         focusedTextBox.parentNode.removeChild(magicButton);
         focusedTextBox.parentNode.appendChild(undoButton);
         
@@ -83,6 +81,10 @@ if (window.location.origin === "https://www.facebook.com") {
         // onChangeSimulation(focusedTextBox);
       }
 
+      document.getElementsByName('xhpc_message')[0].value = focusedTextBox.value;
+      focusedTextBox.style.height = focusedTextBox.scrollHeight + 'px';
+      focusedTextBox.setAttribute('aria-expanded', true);
+ 
     }, false);
 
     /*

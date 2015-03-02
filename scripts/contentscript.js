@@ -26,7 +26,8 @@ if (window.location.origin === "https://www.facebook.com") {
     var magicButton = document.createElement("div");
     var undoButton;
 
-    var textBoxs = document.getElementsByTagName('textarea');
+    var composer = document.getElementById('pagelet_composer');
+    var textBoxs = composer.getElementsByTagName('textarea');
     var focusedTextBox;
 
     // Style magicButton

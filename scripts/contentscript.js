@@ -52,28 +52,25 @@ if (window.location.origin === "https://www.facebook.com") {
     magicButton.addEventListener("click", function(event){
 
       var _String = focusedTextBox.value;
-      var _UniVersoin = "";
-      var _ZawVersoin = "";
       var check = detector(_String);
-
-      if(!check){
-        return; // Not burmese font.
-      } else if(check[0].name === "zaw"){
-        _ZawVersoin = _String;
-        _UniVersoin = Z1_Uni(_String);
-      } else if (check[0].name === "uni"){
-        _ZawVersoin = Uni_Z1(_String);
-        _UniVersoin = _String;
-      }
 
       /* Save old string */
       focusedTextBox.setAttribute("data-magic-button", _String);
 
       if (typeof focusedTextBox.value != 'undefined') {
-        focusedTextBox.value = "(---Unicode Version---)\n" + 
-                          _UniVersoin + 
-                        "\n\n\n(---Zawgyi Version---)\n" + 
-                          _ZawVersoin;
+        if(!check){
+          return; // Not burmese font.
+        } else if(check[0].name === "zaw"){
+          focusedTextBox.value = "[Zawgyi]\n" + 
+                          _String + 
+                        "\n\n\n[Unicode]\n" + 
+                          Z1_Uni(_String);
+        } else if (check[0].name === "uni"){
+          focusedTextBox.value = "[Unicode]\n" + 
+                          _String + 
+                        "\n\n\n[Zawgyi]\n" + 
+                          Uni_Z1(_String);
+        }
 
         focusedTextBox.parentNode.removeChild(magicButton);
         focusedTextBox.parentNode.appendChild(undoButton);

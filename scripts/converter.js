@@ -24,7 +24,6 @@ function Uni_Z1(input)
    output = output.replace(/\u102D\u1036/g, '\u108E');
    output = output.replace(/\u103F/g, '\u1086');
 
-
    output = output.replace(/(\u102F[\u1036]?)\u1037/g, function($0, $1)
    {
       return $1 ? $1 + '\u1094' : $0 + $1;
@@ -70,21 +69,18 @@ function Uni_Z1(input)
    output = output.replace(/([\u103B\u103C][\u103D]?[\u103E]?[\u102D\u1036]?)\u1030/g, function($0, $1)
    {
       return $1 ? $1 + '\u1034' : $0 + $1;
-
    }
    );
    // uu - 2
    output = output.replace(/((\u1039[\u1000-\u1021])[\u102D\u1036]?)\u1030/g, function($0, $1)
    {
       return $1 ? $1 + '\u1034' : $0 + $1;
-
    }
    );
    // uu - 2
    output = output.replace(/([\u100A\u100C\u1020\u1025\u1029][\u102D\u1036]?)\u1030/g, function($0, $1)
    {
       return $1 ? $1 + '\u1034' : $0 + $1;
-
    }
    );
    // uu - 2
@@ -92,16 +88,12 @@ function Uni_Z1(input)
    output = output.replace(/(\u103C)\u103E/g, function($0, $1)
    {
       return $1 ? $1 + '\u1087' : $0 + $1;
-
    }
    );
    // ha - 2
 
-
    output = output.replace(/\u1009(?=[\u103A])/g, '\u1025');
    output = output.replace(/\u1009(?=\u1039[\u1000-\u1021])/g, '\u1025');
-
-
 
    // E render
    output = output.replace( /([\u1000-\u1021\u1029])(\u1039[\u1000-\u1021])?([\u103B-\u103E\u1087]*)?\u1031/g, "\u1031$1$2$3");
@@ -109,8 +101,6 @@ function Uni_Z1(input)
    // Ra render
 
    output = output.replace( /([\u1000-\u1021\u1029])(\u1039[\u1000-\u1021\u1000-\u1021])?(\u103C)/g, "$3$1$2");
-
-
 
    // Kinzi
    output = output.replace(/\u1004\u103A\u1039/g, "\u1064");
@@ -152,7 +142,6 @@ function Uni_Z1(input)
    output = output.replace(/([\u1001\u1002\u1004\u1005\u1007\u1012\u1013\u108F\u1015\u1016\u1017\u1019\u101D])\u1066/g, function($0, $1)
    {
       return $1 ? $1 + '\u1067' : $0 + $1;
-
    }
    );
    // 1067
@@ -165,7 +154,6 @@ function Uni_Z1(input)
    output = output.replace(/([\u1001\u1002\u1004\u1005\u1007\u1012\u1013\u108F\u1015\u1016\u1017\u1019\u101D])\u1071/g, function($0, $1)
    {
       return $1 ? $1 + '\u1072' : $0 + $1;
-
    }
    );
    // 1067
@@ -174,7 +162,6 @@ function Uni_Z1(input)
    output = output.replace(/([\u1001\u1002\u1004\u1005\u1007\u1012\u1013\u108F\u1015\u1016\u1017\u1019\u101D])\u1073/g, function($0, $1)
    {
       return $1 ? $1 + '\u1074' : $0 + $1;
-
    }
    );
    // 1067
@@ -228,7 +215,6 @@ function Uni_Z1(input)
    {
       //      return $1 ? $1 + '\u1087 ' : $0 + $1;
       return $1 ? $1 + '\u1087' : $0 ;
-
    }
    );
    // ha - 2
@@ -249,33 +235,28 @@ function Uni_Z1(input)
    output = output.replace(/(\u1014[\u103A\u1032]?)\u1037/g, function($0, $1)
    {
       return $1 ? $1 + '\u1094' : $0 + $1;
-
    }
    );
    // aukmyint
    output = output.replace(/(\u1033[\u1036]?)\u1094/g, function($0, $1)
    {
       return $1 ? $1 + '\u1095' : $0 + $1;
-
    }
    );
    // aukmyint
    output = output.replace(/(\u1034[\u1036]?)\u1094/g, function($0, $1)
    {
       return $1 ? $1 + '\u1095' : $0 + $1;
-
    }
    );
    // aukmyint
    output = output.replace(/([\u103C\u103D\u108A][\u1032]?)\u1037/g, function($0, $1)
    {
       return $1 ? $1 + '\u1095' : $0 + $1;
-
    }
    );
    // aukmyint
    return output;
-
 }
 
 function Z1_Uni(input)
@@ -303,10 +284,9 @@ function Z1_Uni(input)
    var ha = "\u103E";
    var zero = "\u1040";
    
-   
    output =  output.replace( /\u106A/g, " \u1009");
    output =  output.replace( /\u1025(?=[\u1039\u102C])/g, "\u1009"); //new
-    output =  output.replace( /\u1025\u102E/g, "\u1026"); //new
+   output =  output.replace( /\u1025\u102E/g, "\u1026"); //new
    output =  output.replace( /\u106B/g, "\u100A");
    output =  output.replace( /\u1090/g, "\u101B");
    output =  output.replace( /\u1040/g, zero);
@@ -365,8 +345,6 @@ function Z1_Uni(input)
    ///////////////////////////////////////Pasint order human error
     output =  output.replace( /([\u1000-\u1021])([\u102C\u102D\u102E\u1032\u1036]){1,2}([\u1060\u1061\u1062\u1063\u1065\u1066\u1067\u1068\u1069\u1070\u1071\u1072\u1073\u1074\u1075\u1076\u1077\u1078\u1079\u107A\u107B\u107C\u1085])/g, "$1$3$2");  //new
    
-   
-   
    /////////////
 
    output =  output.replace( /\u1064/g, "\u1004\u103A\u1039");
@@ -409,65 +387,45 @@ function Z1_Uni(input)
    output =  output.replace( /(\u103C)([\u1000-\u1021])(\u1039[\u1000-\u1021])?/g, "$2$3$1");
    // reordering ra
    
-   //output =  output.replace( /(\u103E)?(\u103D)?([\u103B\u103C])/g, "$3$2$1");
+   // output =  output.replace( /(\u103E)?(\u103D)?([\u103B\u103C])/g, "$3$2$1");
    // reordering ra
    
    output =  output.replace( /(\u103E)(\u103D)([\u103B\u103C])/g, "$3$2$1");
-    output =  output.replace( /(\u103E)([\u103B\u103C])/g, "$2$1");
-    
-    output =  output.replace( /(\u103D)([\u103B\u103C])/g, "$2$1");
-   
-  
-
-
-  
-   
-   
+   output =  output.replace( /(\u103E)([\u103B\u103C])/g, "$2$1"); 
+   output =  output.replace( /(\u103D)([\u103B\u103C])/g, "$2$1");
    output = output.replace(/(([\u1000-\u101C\u101E-\u102A\u102C\u102E-\u103F\u104C-\u109F]))(\u1040)(?=\u0020)?/g, function($0, $1)
    {
       return $1 ? $1 + '\u101D' : $0 + $1;
 
    }
    );
+
    // zero and wa
-   
-   
-    output = output.replace(/((\u101D))(\u1040)(?=\u0020)?/g, function($0, $1)
+   output = output.replace(/((\u101D))(\u1040)(?=\u0020)?/g, function($0, $1)
    {
       return $1 ? $1 + '\u101D' : $0 + $1;
 
    }
    );
    // zero and wa
-   
-   
- 
-
 
    output = output.replace(/(([\u1000-\u101C\u101E-\u102A\u102C\u102E-\u103F\u104C-\u109F\u0020]))(\u1047)/g, function($0, $1)
    {
       return $1 ? $1 + '\u101B' : $0 + $1;
-
    }
    );
-   // seven and ra
 
+   // seven and ra
    output =  output.replace( /(\u1047)( ? = [\u1000 - \u101C\u101E - \u102A\u102C\u102E - \u103F\u104C - \u109F\u0020])/g, "\u101B");
    // seven and ra
-   
 
-  /* output =  output.replace( /(\u1031)?([\u1000-\u1021])(\u1039[\u1000-\u1021])?([\u102D\u102E\u1032])?([\u1036\u1037\u1038]{0,2})([\u103B-\u103E]{0,3})([\u102F\u1030])?([\u102D\u102E\u1032])?/g, "$2$3$6$1$4$8$7$5");
+   /* output =  output.replace( /(\u1031)?([\u1000-\u1021])(\u1039[\u1000-\u1021])?([\u102D\u102E\u1032])?([\u1036\u1037\u1038]{0,2})([\u103B-\u103E]{0,3})([\u102F\u1030])?([\u102D\u102E\u1032])?/g, "$2$3$6$1$4$8$7$5");
    // reordering storage order*/
-   
    output =  output.replace( /(\u1031)?([\u1000-\u1021])(\u1039[\u1000-\u1021])?([\u102D\u102E\u1032])?([\u1036\u1037\u1038]{0,2})([\u103B-\u103E]{0,3})([\u102F\u1030])?([\u1036\u1037\u1038]{0,2})([\u102D\u102E\u1032])?/g, "$2$3$6$1$4$9$7$5$8");
    // reordering storage order 
-   output = output.replace(ans+u, u+ans);
    
-    output =  output.replace( /(\u103A)(\u1037)/g, "$2$1");
+   output = output.replace(ans+u, u+ans);
+   output =  output.replace( /(\u103A)(\u1037)/g, "$2$1");
    // For Latest Myanmar3
-
-
    return output;
-
-
 }
